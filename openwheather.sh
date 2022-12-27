@@ -41,7 +41,7 @@ if (( $(awk -v zscore=$zscore 'BEGIN {print (zscore < -3)}') )) || (( $(awk -v z
     # Print a message indicating that the current temperature is abnormal
     echo "The current temperature in Paris is abnormal ($temperature°C). It is $num_stddev standard deviations away from the mean."
     # Send a message to a Telegram chat with this information
-    curl --data chat_id="YOUR_CHAT_ID" --data-urlencode "text=The current temperature in Paris is abnormal ($temperature°C). It is $num_stddev standard deviations away from the mean." "https://api.telegram.org/botYOUR_API_KEY/sendMessage?parse_mode=HTML"
+    curl --data chat_id="1672450594" --data-urlencode "text=The current temperature in Paris is abnormal ($temperature°C). It is $num_stddev standard deviations away from the mean." "https://api.telegram.org/botYOUR_API_KEY/sendMessage?parse_mode=HTML"
 else
     # Print a message indicating that the current temperature is normal
     echo "The current temperature in Paris is normal ($temperature°C)."
